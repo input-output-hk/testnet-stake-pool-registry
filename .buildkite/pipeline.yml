@@ -2,6 +2,6 @@ steps:
   - label: 'validate'
     env:
     command:
-      - "validate.sh"
+      - "nix-shell -p jq --run ./validate.sh"
     agents:
       system: x86_64-linux
