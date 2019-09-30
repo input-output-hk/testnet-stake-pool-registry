@@ -1,7 +1,7 @@
 {
   "id": "0000000000000000000000000000000000000000000000000000000000000001",
   "ticker": "DEFG",
-  "homepage": "https://foo.bar.quux",
-  "margin": 0.2718281828,
+  "homepage": "https://foo.bar.woot",
+  "margin": 0.271828182845904523,
   "cost": 1961
 }
