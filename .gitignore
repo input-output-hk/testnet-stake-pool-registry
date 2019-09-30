@@ -1,0 +1,9 @@
+.stack-work/
+.ghc.environment.*
+dist-newstyle/
+dist/
+*~
+\#*
+\.#*
+*.swp
+result*
