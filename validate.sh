@@ -24,17 +24,23 @@ show                 BUILDKITE_BUILD_CREATOR
 show           BUILDKITE_BUILD_CREATOR_EMAIL
 show             BUILDKITE_PULL_REQUEST_REPO
 
-banner "Validating environment.."
-
-validateEnv                   BUILDKITE_COMMAND "nix-shell -p jq --run ./validate.sh"
-validateEnv                      BUILDKITE_REPO "https://github.com/input-output-hk/testnet-stake-pool-registry"
-# validateEnv  BUILDKITE_PULL_REQUEST_BASE_BRANCH "master"
-
 banner "Validating Git history of the branch.."
 set -u
 
 test -z "${NO_FETCH}" &&
         git fetch origin master
 validateGitHistory
+
+banner "Validating submission content.."
+set -x
+cardano-cli \
+  --real-pbft \
+  validate-registry-submission \
+  --registry-root       $(realpath ".") \
+  --registry-submission $(realpath ${entry})
+set +x
+
+banner "Validating commit message.."
+validateCommitMessage
 
 banner "Checks passed."
