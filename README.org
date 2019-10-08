@@ -43,13 +43,12 @@
        up to character case (all lowercase).
     6. Contents of the JSON file:
        1. Must be a JSON object, reasonably (non-offensively) formatted,
-       2. Must contain these three mandatory fields:
+       2. Must contain these four mandatory fields:
           - "id" :: must consist of the ID string, prepended with the string
                     =ed25519_= (8 characters),
           - "ticker" :: must be either a 3 or a 4-character long, all-uppercase
                         alphabetic string, formed of ASCII characters,
           - "homepage" :: must be an absolute URL for the stake pool's web page,
-       3. Can contain one optional field ::
           - "pledge_address" :: a string with the Bech-32 -encoded pledge address,
                prepended with the string =ed25519_= (8 characters).
        4. No other fields are allowed.
