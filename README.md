@@ -25,13 +25,15 @@ Each entry contains the following information:
 
 name             | necessity | description
 ---              | ---       | ---
-`owner`          | required  | subject identifier
+`owner`          | required  | subject identifier public key 
 `name`           | required  | stake pool name
 `description`    | optional  | stake pool description
 `ticker`         | required  | stake pool ticker
 `homepage`       | required  | URL of the stake pool's web page
 `pledge_address` | required  | a pledge address
 \-               | required  | signature (verifiable by the public key)
+
+:warning: The `owner` public key mentioned here **must match** your owner public key used for registering your stake pool on chain! :warning:
 
 Precise entry validity rules are described in the following section.
 
