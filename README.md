@@ -145,7 +145,7 @@ ed25519_sk1----------------------------------------------------------
 ed25519_pk1qppzz38el9zxtgaw0ttmf6d6zytllfu3fnwcl5tlc3pp044artxqru55mx
 ```
 
-2. Create a minimal JSON file (`ed25519_pk1qpp...ru55mx.json`)
+3. Create a minimal JSON file (`ed25519_pk1qpp...ru55mx.json`)
 ```json
 {
   "owner": "ed25519_pk1qppzz38el9zxtgaw0ttmf6d6zytllfu3fnwcl5tlc3pp044artxqru55mx",
@@ -158,7 +158,7 @@ ed25519_pk1qppzz38el9zxtgaw0ttmf6d6zytllfu3fnwcl5tlc3pp044artxqru55mx
 
 > :bulb: You can check that your JSON is valid by using the JSON-schema above and your metadata file in a tool like https://www.jsonschemavalidator.net/
 
-3. Sign it using your owner private key (`ed25519_pk1qpp...ru55mx.sig`)
+4. Sign it using your owner private key (`ed25519_pk1qpp...ru55mx.sig`)
 
 ```
 $ jcli key sign \
@@ -167,7 +167,7 @@ $ jcli key sign \
     ed25519_pk1qppzz38el9zxtgaw0ttmf6d6zytllfu3fnwcl5tlc3pp044artxqru55mx.json
 ```
 
-4. Create a commit for the submission
+5. Create a commit for the submission
 
 ```
 $ git add ed25519_pk1qppzz38el9zxtgaw0ttmf6d6zytllfu3fnwcl5tlc3pp044artxqru55mx.{json,sig}
@@ -175,4 +175,4 @@ $ git commit -m "ADA1 new"
 $ git push submission HEAD
 ```
 
-5. Make a pull request :tada:!
+6. Make a pull request :tada:!
