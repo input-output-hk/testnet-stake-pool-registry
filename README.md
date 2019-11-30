@@ -31,7 +31,7 @@ name             | necessity | description
 `ticker`         | required  | stake pool ticker
 `homepage`       | required  | URL of the stake pool's web page
 `pledge_address` | required  | a pledge address
--                | required  | signature (verifiable by the public key)
+\-               | required  | signature (verifiable by the public key)
 
 Precise entry validity rules are described in the following section.
 
